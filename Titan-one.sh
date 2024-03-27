@@ -82,12 +82,6 @@ cd "$INSTALL_DIR" || exit
 wget -O titan_linux_amd64.tar.gz "$RELEASE_URL"
 tar -xvzf titan_linux_amd64.tar.gz --strip-components=1
 
-#初始化
-./titan-edge daemon start --init --url https://test-locator.titannet.io:5000/rpc/v0 || exit
-
-# 绑定身份码
-read -p "请输入您身份码：" SECRET_SEED_PHRASE
-./titan-edge bind --hash=$SECRET_SEED_PHRASE https://api-test1.container1.titannet.io/api/v2/device/binding
 
 
 # 配置 systemd 服务文件
@@ -109,6 +103,10 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable titan
 sudo systemctl start titan.service
+
+# 绑定身份码
+read -p "请输入您身份码：" SECRET_SEED_PHRASE
+./titan-edge bind --hash=$SECRET_SEED_PHRASE https://api-test1.container1.titannet.io/api/v2/device/binding
 
 # 完成安装提示
 echo ====================================== 安装完成 =========================================
