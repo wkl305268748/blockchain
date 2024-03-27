@@ -122,12 +122,12 @@ function check_service_status() {
 
 # Titan 节点日志查询
 function view_logs() {
-    sudo journalctl -f -u availd.service 
+    sudo journalctl -f -u titan.service 
 }
 
 # 查询节点匹配的钱包地址（建议安装好后，就查询钱包地址，如果日志过长，该功能可能会失效）
 function check_wallet() {
-    journalctl -u availd | grep address
+    journalctl -u titan | grep address
 }
 
 # 主菜单
