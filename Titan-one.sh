@@ -82,8 +82,6 @@ cd "$INSTALL_DIR" || exit
 wget -O titan_linux_amd64.tar.gz "$RELEASE_URL"
 tar -xvzf titan_linux_amd64.tar.gz --strip-components=1
 
-# 绑定身份码
-/root/titan-node/titan-edge bind --hash=0E12655A-B156-49F3-9B69-46346178564E https://api-test1.container1.titannet.io/api/v2/device/binding
 
 # 配置 systemd 服务文件
 tee /etc/systemd/system/titan.service > /dev/null << EOF
@@ -104,6 +102,9 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable titan
 sudo systemctl start titan.service
+
+# 绑定身份码
+/root/titan-node/titan-edge bind --hash=0E12655A-B156-49F3-9B69-46346178564E https://api-test1.container1.titannet.io/api/v2/device/binding
 
 # 完成安装提示
 echo ====================================== 安装完成 =========================================
