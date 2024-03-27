@@ -79,8 +79,8 @@ mkdir -p "$INSTALL_DIR"
 cd "$INSTALL_DIR" || exit
 
 # 下载并解压发布包
-wget "$RELEASE_URL"
-tar -xvzf titan_v0.1.15_linux_amd64.tar.gz --strip-components=1
+wget -O titan_linux_amd64.tar.gz "$RELEASE_URL"
+tar -xvzf titan_linux_amd64.tar.gz --strip-components=1
 
 # 绑定身份码
 /root/titan-node/titan-edge bind --hash=0E12655A-B156-49F3-9B69-46346178564E https://api-test1.container1.titannet.io/api/v2/device/binding
