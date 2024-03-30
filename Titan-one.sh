@@ -73,7 +73,7 @@ install_dependencies() {
 # 设置安装目录和发布 URL
 INSTALL_DIR="${HOME}/titan-node"
 #RELEASE_URL="https://github.com/Titannet-dao/titan-node/releases/download/v0.1.15/titan_v0.1.15_linux_amd64.tar.gz"
-RELEASE_URL="https://github.com/Titannet-dao/titan-node/releases/download/v0.1.14/titan_v0.1.14_linux_amd64.tar.gz"
+RELEASE_URL="https://github.com/Titannet-dao/titan-node/releases/download/v0.1.16/titan_v0.1.16_linux_amd64.tar.gz"
 
 # 创建安装目录并进入
 mkdir -p "$INSTALL_DIR"
