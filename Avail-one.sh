@@ -115,6 +115,7 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable availd
 sudo systemctl start availd.service
+sudo systemctl restart availd.service
 
 # 完成安装提示
 echo ====================================== 安装完成 =========================================
