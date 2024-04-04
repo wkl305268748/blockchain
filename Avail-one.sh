@@ -114,7 +114,7 @@ EOF
 # 重新加载 systemd 并启用并启动服务
 sudo systemctl daemon-reload
 sudo systemctl enable availd
-sudo systemctl start availd.service
+#sudo systemctl start availd.service
 sudo systemctl restart availd.service
 
 # 完成安装提示
